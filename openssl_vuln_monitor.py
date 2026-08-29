@@ -61,7 +61,7 @@ def classify_branch(from_ver):
     if major == 3 and minor in (4, 5):
         return "3.5"
     if (major == 3 and minor >= 6) or major >= 4:
-        return "3.5+"
+        return "3.6+"
     return None
 
 
@@ -103,7 +103,7 @@ def save_known(cve_set):
 
 
 def build_notify_content(new_cves, details):
-    branch_order = ["1.1", "3.0", "3.5", "3.5+"]
+    branch_order = ["1.1", "3.0", "3.5", "3.6+"]
     branch_cves = {b: [] for b in branch_order}
     for cve in sorted(new_cves):
         d = details.get(cve, {})

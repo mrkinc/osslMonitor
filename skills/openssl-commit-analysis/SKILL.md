@@ -29,7 +29,7 @@ Externally observable changes include:
 - command line behavior changes
 - default behavior or security policy changes
 
-The final result must be saved in chinese as a single Markdown file:
+The final result must be saved in Chinese as a single Markdown file:
 
 ```text
 output/openssl_commit_review.md
@@ -639,7 +639,7 @@ Write the final report to this file path:
 output/openssl_commit_review.md
 ```
 
-The report must be in chinese and contain:
+The report must be in Chinese and contain:
 
 1. Review Scope
 2. Statistics
@@ -823,7 +823,7 @@ Do not paste the report into chat unless the user asks for it.
 
 ```text
 1. Generate only one final user-facing Markdown report:
-   output/openssl_commit_review.md, language MUST be chinese
+   output/openssl_commit_review.md, language MUST be Chinese
 
 2. Temporary files are allowed, but do not mention them in the final response.
 
@@ -861,11 +861,11 @@ Do not paste the report into chat unless the user asks for it.
 
 19. If a cherry-pick fails, abort it, record the failure, and continue with the next commit.
 
-20. High Impact 和 Medium Impact commits 必须在表格中包含"影响概述"列。
+20. High Impact and Medium Impact commits must include the "影响概述" column in the table.
 
-21. TEST_ONLY commits 不得标记为 impact_level=NONE，最低为 LOW。
+21. TEST_ONLY commits must not be marked as impact_level=NONE; the minimum is LOW.
 
-22. "结论"节必须按合入时间从新到旧（最新合入的 commit 排在最上面）列出所有 commit，"分析结论"列必须留空。
+22. The "结论" section must list all commits in reverse chronological order (newest commit at the top), and the "分析结论" column must be left blank.
 
-23. 仅文档/仅APPS/CI修改的 commit 在"结论"节的风险级别列标为`无风险（仅文档修改）`、`无风险（仅APPS修改）`、`无风险（仅CI修改）`等格式。
+23. Doc-only / APPS-only / CI-only commits must be labeled in the risk level column of the "结论" section as `无风险（仅文档修改）`, `无风险（仅APPS修改）`, `无风险（仅CI修改）`, etc.
 ```
